@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineType} from 'sanity'
 
 export default defineType({
   name: 'project',
@@ -24,12 +24,12 @@ export default defineType({
       title: 'Summary',
       type: 'text',
     },
-    // {
-    //   name: 'technologies',
-    //   title: 'Technologies',
-    //   type: 'array',
-    //   of: [{type: 'reference', to: {type: 'skill'}}],
-    // },
+    {
+      name: 'technologies',
+      title: 'Technologies',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'skills'}}],
+    },
     {
       name: 'linktoBuild',
       title: 'LinkToBuild',

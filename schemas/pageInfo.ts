@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineType} from 'sanity'
 
 export default defineType({
   name: 'pageInfo',
@@ -30,7 +30,7 @@ export default defineType({
     },
     {
       name: 'profilePicture',
-      title: 'ProfilePicture',
+      title: 'Profile Picture',
       type: 'image',
       options: {
         hotspot: true,
@@ -51,11 +51,11 @@ export default defineType({
       title: 'Address',
       type: 'string',
     },
-    // {
-    //   name: 'socials',
-    //   title: 'Socials',
-    //   type: 'array',
-    //   of: [{type: 'reference', to: {type: 'social'}}],
-    // },
+    {
+      name: 'socials',
+      title: 'Socials',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'social'}}],
+    },
   ],
 })
